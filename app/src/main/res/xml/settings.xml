@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Reminders"
+        android:layout_marginStart="0dp">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="notifications_reminder"
+            android:title="Set Reminder"
+            android:layout_marginStart="0dp" />
+        <!--        <TimePreference-->
+        <!--            android:key="timePrefA_Key"-->
+        <!--            android:title="Set Time Reminder"/>-->
+
+    </PreferenceCategory>
+
+    <!--    <PreferenceCategory-->
+    <!--        android:title="title_second_section">-->
+
+
+    <!--        <Preference-->
+    <!--            android:title="title_intent_preference">-->
+    <!--            <intent android:action="android.intent.action.VIEW"-->
+    <!--                android:data="http://codepath.com/" />-->
+    <!--        </Preference>-->
+
+    <!--    </PreferenceCategory>-->
+
+</PreferenceScreen>

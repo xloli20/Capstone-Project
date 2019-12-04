@@ -1,7 +1,11 @@
 package com.example.fitnessapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
+import com.example.fitnessapp.ui.FavoritesActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,8 +27,23 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_workout, R.id.navigation_setting)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int ItemThatWasClickedId = item.getItemId();
+        if (ItemThatWasClickedId == R.id.favs) {
+            Intent intent = new Intent(this, FavoritesActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

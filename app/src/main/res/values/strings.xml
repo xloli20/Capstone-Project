@@ -2,4 +2,6 @@
     <string name="app_name">Fitness App</string>
     <string name="title_workout">WORKOUTS</string>
     <string name="title_setting">SETTINGS</string>
+    <string name="cancel">cancel</string>
+    <string name="set">set</string>
 </resources>
