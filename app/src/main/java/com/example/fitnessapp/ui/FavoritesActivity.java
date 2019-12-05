@@ -11,9 +11,8 @@ import com.example.fitnessapp.R;
 
 import java.util.List;
 
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -49,23 +48,20 @@ public class FavoritesActivity extends AppCompatActivity {
         //
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
-            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                 return false;
             }
 
             // Called when a user swipes left or right on a ViewHolder
             @Override
-            public void onSwiped(final RecyclerView.ViewHolder viewHolder, int swipeDir) {
+            public void onSwiped(@NonNull final RecyclerView.ViewHolder viewHolder, int swipeDir) {
                 // call the diskIO execute method with a new Runnable and implement its run method
-                AppExecutors.getInstance().diskIO().execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        // get the position from the viewHolder parameter
-                        int position = viewHolder.getAdapterPosition();
-                        List<FavoritesWorkouts> favorites = favoritesAdapter.getTasks();
-                        //Call deleteTask in the taskDao with the task at that position
-                        mDB.favoritesWorkoutDao().deleteWorkout(favorites.get(position));
-                    }
+                AppExecutors.getInstance().diskIO().execute(() -> {
+                    // get the position from the viewHolder parameter
+                    int position = viewHolder.getAdapterPosition();
+                    List<FavoritesWorkouts> favorites = favoritesAdapter.getTasks();
+                    //Call deleteTask in the taskDao with the task at that position
+                    mDB.favoritesWorkoutDao().deleteWorkout(favorites.get(position));
                 });
             }
         }).attachToRecyclerView(fRecyclerView);
@@ -78,12 +74,9 @@ public class FavoritesActivity extends AppCompatActivity {
         // Declare a ViewModel variable and initialize it by calling ViewModelProviders.of
         MainViewModel viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         // Observe the LiveData object in the ViewModel
-        viewModel.getFavorites().observe(this, new Observer<List<FavoritesWorkouts>>() {
-            @Override
-            public void onChanged(@Nullable List<FavoritesWorkouts> favoritesWorkouts) {
-                Log.d(TAG, "Updating list of movies from LiveData in ViewModel");
-                favoritesAdapter.setmFavorites(favoritesWorkouts);
-            }
+        viewModel.getFavorites().observe(this, favoritesWorkouts -> {
+            Log.d(TAG, "Updating list of movies from LiveData in ViewModel");
+            favoritesAdapter.setmFavorites(favoritesWorkouts);
         });
     }
 }

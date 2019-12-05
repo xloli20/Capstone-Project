@@ -65,8 +65,6 @@ public class TimePreference extends DialogPreference {
         persistInt(time);
     }
 
-    //
-
     /**
      * Called when a Preference is being inflated and the default value attribute needs to be read
      */
@@ -74,10 +72,8 @@ public class TimePreference extends DialogPreference {
     protected Object onGetDefaultValue(TypedArray a, int index) {
         // The type of this preference is Int, so we read the default value from the attributes
         // as Int. Fallback value is set to 0.
-            return a.getString(index);
+        return a.getString(index);
     }
-
-    //
 
     /**
      * Returns the layout resource that is used as the content View for the dialog
@@ -86,18 +82,5 @@ public class TimePreference extends DialogPreference {
     public int getDialogLayoutResource() {
         return mDialogLayoutResId;
     }
-
-
-    //
-
-    /**
-     * Implement this to set the initial value of the Preference.
-     */
-//    @Override
-//    protected void onSetInitialValue(boolean restorePersistedValue, Object defaultValue) {
-//        // If the value can be restored, do it. If not, use the default value.
-//        setTime(restorePersistedValue ?
-//                getPersistedInt(mTime) : (int) defaultValue);
-//    }
 
 }

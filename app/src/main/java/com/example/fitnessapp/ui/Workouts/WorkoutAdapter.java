@@ -57,7 +57,6 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
 
         private ImageView imageView;
         private TextView textView;
-        Context context;
 
         WorkoutViewHolder(@NonNull View itemView) {
             super(itemView);

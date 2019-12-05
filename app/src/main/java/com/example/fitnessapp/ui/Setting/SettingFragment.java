@@ -24,12 +24,12 @@ public class SettingFragment extends PreferenceFragmentCompat {
         syncPref.setOnPreferenceClickListener((new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                if(syncPref.shouldDisableDependents()){
+                if (syncPref.shouldDisableDependents()) {
                     Log.d(getTag(), "onPreferenceChange: syncPref.isEnabled...... ");
                     preference = findPreference("pref_pref4");
                     preference.setVisible(false);
 
-                }else {
+                } else {
                     Log.d(getTag(), "onPreferenceChange: else...... ");
                     preference = findPreference("pref_pref4");
                     preference.setVisible(true);
@@ -61,7 +61,5 @@ public class SettingFragment extends PreferenceFragmentCompat {
             // Dialog creation could not be handled here. Try with the super method.
             super.onDisplayPreferenceDialog(preference);
         }
-
-
     }
 }

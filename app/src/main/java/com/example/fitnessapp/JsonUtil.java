@@ -41,5 +41,4 @@ public class JsonUtil {
         data_json = data_json.replace("\\", "");
         return data_json;
     }
-
 }

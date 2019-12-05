@@ -10,14 +10,14 @@ public class WorkoutModel implements Parcelable {
     private String workoutImages;
     private String workoutInstructions;
 
-    public WorkoutModel(String workoutName, String workoutVideo, String workoutImages, String workoutInstructions) {
+    WorkoutModel(String workoutName, String workoutVideo, String workoutImages, String workoutInstructions) {
         this.workoutName = workoutName;
         this.workoutVideo = workoutVideo;
         this.workoutImages = workoutImages;
         this.workoutInstructions = workoutInstructions;
     }
 
-    protected WorkoutModel(Parcel in) {
+    private WorkoutModel(Parcel in) {
         workoutName = in.readString();
         workoutVideo = in.readString();
         workoutImages = in.readString();

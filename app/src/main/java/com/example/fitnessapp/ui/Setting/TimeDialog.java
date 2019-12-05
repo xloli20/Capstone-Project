@@ -20,6 +20,7 @@ public class TimeDialog extends PreferenceDialogFragmentCompat {
     private TimePicker mTimePicker;
     private int hours;
     private int minutes;
+
     /**
      * Creates a new Instance of the TimeDialog and stores the key of the
      * related Preference
@@ -36,9 +37,6 @@ public class TimeDialog extends PreferenceDialogFragmentCompat {
         return timeDialog;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
     protected void onBindDialogView(View view) {
         super.onBindDialogView(view);
@@ -105,14 +103,12 @@ public class TimeDialog extends PreferenceDialogFragmentCompat {
                     timePreference.setTime(minutesAfterMidnight);
 
                     preference.setSummary(getSummary());
-
                 }
             }
         }
     }
 
     private CharSequence getSummary() {
-
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.HOUR_OF_DAY, hours);
         cal.set(Calendar.MINUTE, minutes);

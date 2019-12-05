@@ -18,14 +18,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolder> {
 
-    private int viewHolderCount;
     private List<FavoritesWorkouts> mFavorites;
 
     private Context context;
 
-    public FavoritesAdapter(Context context) {
+    FavoritesAdapter(Context context) {
         this.context = context;
-        viewHolderCount = 0;
     }
 
     @NonNull
@@ -48,12 +46,12 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.Favo
         return mFavorites.size();
     }
 
-    public void setmFavorites(List<FavoritesWorkouts> favoritesWorkouts) {
+    void setmFavorites(List<FavoritesWorkouts> favoritesWorkouts) {
         mFavorites = favoritesWorkouts;
         notifyDataSetChanged();
     }
 
-    public List<FavoritesWorkouts> getTasks() {
+    List<FavoritesWorkouts> getTasks() {
         return mFavorites;
     }
 
@@ -62,9 +60,8 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.Favo
         TextView textView;
         TextView textViewInstruction;
 
-        public FavoritesViewHolder(@NonNull View itemView) {
+        FavoritesViewHolder(@NonNull View itemView) {
             super(itemView);
-
             imageView = itemView.findViewById(R.id.workout_image);
             textView = itemView.findViewById(R.id.workout_title);
             textViewInstruction = itemView.findViewById(R.id.workout_instruction);
@@ -80,8 +77,6 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.Favo
                     .into(imageView);
             textView.setText(favoritesWorkouts.getWorkoutName());
             textViewInstruction.setText(favoritesWorkouts.getWorkoutInstruction());
-
         }
     }
-
 }
