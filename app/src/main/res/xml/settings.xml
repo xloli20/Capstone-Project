@@ -1,31 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory
-        android:title="Reminders"
-        android:layout_marginStart="0dp">
+    <androidx.preference.PreferenceCategory
+        android:title="@string/preferences_category_one">
 
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="notifications_reminder"
-            android:title="Set Reminder"
-            android:layout_marginStart="0dp" />
-        <!--        <TimePreference-->
-        <!--            android:key="timePrefA_Key"-->
-        <!--            android:title="Set Time Reminder"/>-->
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="pref_pref1"
+            android:title="@string/preferences_switch_title"/>
 
-    </PreferenceCategory>
+        <com.example.fitnessapp.ui.Setting.TimePreference
+            style="@style/AppPreference.DialogPreference"
+            android:defaultValue="90"
+            android:key="pref_pref4"
+            android:summary="@string/preferences_time_summ"
+            android:title="@string/preferences_time_title"/>
 
-    <!--    <PreferenceCategory-->
-    <!--        android:title="title_second_section">-->
-
-
-    <!--        <Preference-->
-    <!--            android:title="title_intent_preference">-->
-    <!--            <intent android:action="android.intent.action.VIEW"-->
-    <!--                android:data="http://codepath.com/" />-->
-    <!--        </Preference>-->
-
-    <!--    </PreferenceCategory>-->
+    </androidx.preference.PreferenceCategory>
 
 </PreferenceScreen>

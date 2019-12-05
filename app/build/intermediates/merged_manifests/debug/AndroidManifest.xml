@@ -24,8 +24,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
-        <activity android:name="com.example.fitnessapp.ui.DetailActivity" >
-        </activity>
+        <activity android:name="com.example.fitnessapp.ui.DetailActivity" />
         <activity android:name="com.example.fitnessapp.ui.FavoritesActivity" />
         <activity
             android:name="com.example.fitnessapp.MainActivity"

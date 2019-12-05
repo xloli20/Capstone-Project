@@ -2,97 +2,102 @@ package com.example.fitnessapp.ui.Setting;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.preference.DialogPreference;
-import android.text.format.DateFormat;
 import android.util.AttributeSet;
-import android.view.View;
-import android.widget.TimePicker;
 
 import com.example.fitnessapp.R;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-
+import androidx.preference.DialogPreference;
 
 public class TimePreference extends DialogPreference {
-    private Calendar calendar;
-    private TimePicker picker = null;
 
-    public TimePreference(Context ctxt) {
-        this(ctxt, null);
+    /**
+     * In Minutes after midnight
+     */
+    private int mTime;
+
+    /**
+     * Resource of the dialog layout
+     */
+    private int mDialogLayoutResId = R.layout.pref_dialog_time;
+
+    public TimePreference(Context context) {
+        // Delegate to other constructor
+        this(context, null);
     }
 
-    public TimePreference(Context ctxt, AttributeSet attrs) {
-        this(ctxt, attrs, android.R.attr.dialogPreferenceStyle);
+    public TimePreference(Context context, AttributeSet attrs) {
+        // Delegate to other constructor
+        // Use the preferenceStyle as the default style
+        this(context, attrs, R.attr.preferenceStyle);
     }
 
-    public TimePreference(Context ctxt, AttributeSet attrs, int defStyle) {
-        super(ctxt, attrs, defStyle);
-
-        setPositiveButtonText(R.string.set);
-        setNegativeButtonText(R.string.cancel);
-        calendar = new GregorianCalendar();
+    public TimePreference(Context context, AttributeSet attrs, int defStyleAttr) {
+        // Delegate to other constructor
+        this(context, attrs, defStyleAttr, defStyleAttr);
     }
 
-    @Override
-    protected View onCreateDialogView() {
-        picker = new TimePicker(getContext());
-        return (picker);
+    public TimePreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+
+        // Du custom stuff here
+        // ...
+        // read attributes etc.
     }
 
-    @Override
-    protected void onBindDialogView(View v) {
-        super.onBindDialogView(v);
-        picker.setCurrentHour(calendar.get(Calendar.HOUR_OF_DAY));
-        picker.setCurrentMinute(calendar.get(Calendar.MINUTE));
+    /**
+     * Gets the time from the Shared Preferences
+     *
+     * @return The current preference value
+     */
+    public int getTime() {
+        return mTime;
     }
 
-    @Override
-    protected void onDialogClosed(boolean positiveResult) {
-        super.onDialogClosed(positiveResult);
+    /**
+     * Saves the time to the SharedPreferences
+     *
+     * @param time The time to save
+     */
+    public void setTime(int time) {
+        mTime = time;
 
-        if (positiveResult) {
-            calendar.set(Calendar.HOUR_OF_DAY, picker.getCurrentHour());
-            calendar.set(Calendar.MINUTE, picker.getCurrentMinute());
-
-            setSummary(getSummary());
-            if (callChangeListener(calendar.getTimeInMillis())) {
-                persistLong(calendar.getTimeInMillis());
-                notifyChanged();
-            }
-        }
+        // Save to SharedPreference
+        persistInt(time);
     }
 
+    //
+
+    /**
+     * Called when a Preference is being inflated and the default value attribute needs to be read
+     */
     @Override
     protected Object onGetDefaultValue(TypedArray a, int index) {
-        return (a.getString(index));
+        // The type of this preference is Int, so we read the default value from the attributes
+        // as Int. Fallback value is set to 0.
+            return a.getString(index);
     }
 
+    //
+
+    /**
+     * Returns the layout resource that is used as the content View for the dialog
+     */
     @Override
-    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-
-        if (restoreValue) {
-            if (defaultValue == null) {
-                calendar.setTimeInMillis(getPersistedLong(System.currentTimeMillis()));
-            } else {
-                calendar.setTimeInMillis(Long.parseLong(getPersistedString((String) defaultValue)));
-            }
-        } else {
-            if (defaultValue == null) {
-                calendar.setTimeInMillis(System.currentTimeMillis());
-            } else {
-                calendar.setTimeInMillis(Long.parseLong((String) defaultValue));
-            }
-        }
-        setSummary(getSummary());
+    public int getDialogLayoutResource() {
+        return mDialogLayoutResId;
     }
 
-    @Override
-    public CharSequence getSummary() {
-        if (calendar == null) {
-            return null;
-        }
-        return DateFormat.getTimeFormat(getContext()).format(new Date(calendar.getTimeInMillis()));
-    }
+
+    //
+
+    /**
+     * Implement this to set the initial value of the Preference.
+     */
+//    @Override
+//    protected void onSetInitialValue(boolean restorePersistedValue, Object defaultValue) {
+//        // If the value can be restored, do it. If not, use the default value.
+//        setTime(restorePersistedValue ?
+//                getPersistedInt(mTime) : (int) defaultValue);
+//    }
+
 }

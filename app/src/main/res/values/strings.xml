@@ -4,4 +4,18 @@
     <string name="title_setting">SETTINGS</string>
     <string name="cancel">cancel</string>
     <string name="set">set</string>
+
+    <string name="preferences_category_one">Reminders</string>
+    <string name="preferences_category_two">Category 2</string>
+
+    <string name="preferences_switch_title">Set Reminder</string>
+    <string name="preferences_switch_summ">Switch Summary</string>
+
+
+    <string name="preferences_time_title">Set Time Reminder</string>
+    <string name="preferences_time_summ">00:00</string>
+
+    <string name="preferences_checkbox_title">CheckBox Preference</string>
+    <string name="preferences_checkbox_summ">CheckBox Summary</string>
+
 </resources>

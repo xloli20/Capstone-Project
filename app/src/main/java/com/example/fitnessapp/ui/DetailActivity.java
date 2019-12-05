@@ -97,10 +97,7 @@ public class DetailActivity extends AppCompatActivity {
                     });
                 }
             });
-
         }
-
-
     }
 
     @Override

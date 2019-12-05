@@ -68,7 +68,7 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:1.1.1"
     annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
 
-    implementation 'com.takisoft.fix:preference-v7:25.3.0.0'
-
+    implementation 'androidx.preference:preference:1.1.0'
+    implementation 'androidx.legacy:legacy-preference-v14:1.0.0'
 
 }
