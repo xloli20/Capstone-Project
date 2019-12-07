@@ -39,7 +39,7 @@ public class TimePreference extends DialogPreference {
     public TimePreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
 
-        // Du custom stuff here
+        // todo: Du custom stuff here
         // ...
         // read attributes etc.
     }

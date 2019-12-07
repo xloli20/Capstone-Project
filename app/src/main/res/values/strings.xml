@@ -18,4 +18,10 @@
     <string name="preferences_checkbox_title">CheckBox Preference</string>
     <string name="preferences_checkbox_summ">CheckBox Summary</string>
 
+    <!--    fcm-->
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
 </resources>

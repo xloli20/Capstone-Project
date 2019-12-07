@@ -706,7 +706,10 @@ bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
 bool config_materialPreferenceIconSpaceReserved
+bool enable_system_alarm_service_default
+bool enable_system_job_service_default
 bool mtrl_btn_textappearance_all_caps
+bool workmanager_test_configuration
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -2425,6 +2428,8 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string copy
+string default_notification_channel_id
+string default_web_client_id
 string exo_controls_fastforward_description
 string exo_controls_fullscreen_description
 string exo_controls_next_description
@@ -2461,7 +2466,14 @@ string expand_button_title
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string fcm_fallback_notification_channel_label
+string firebase_database_url
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
+string msg_token_fmt
 string mtrl_chip_close_icon_content_description
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
@@ -2480,6 +2492,7 @@ string preferences_switch_summ
 string preferences_switch_title
 string preferences_time_summ
 string preferences_time_title
+string project_id
 string search_menu_title
 string set
 string status_bar_notification_info_overflow

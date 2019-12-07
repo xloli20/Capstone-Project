@@ -3,10 +3,13 @@ package com.example.fitnessapp.ui.Setting;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.TimePicker;
 
 import com.example.fitnessapp.R;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.messaging.RemoteMessage;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -97,12 +100,19 @@ public class TimeDialog extends PreferenceDialogFragmentCompat {
                 TimePreference timePreference = ((TimePreference) preference);
                 preference.setSummary(getSummary());
 
+                FirebaseMessaging.getInstance().send(
+                        new RemoteMessage.Builder("554269775990" + "@gcm.googleapis.com")
+                                .setMessageId("0")
+                                .addData("time", String.valueOf(getSummary()))
+//                                .setToken(R.string.msg_token_fmt)
+                                .build());
+                Log.d(getTag(), "onDialogClosed: message....");
+
                 // This allows the client to ignore the user value.
                 if (timePreference.callChangeListener(minutesAfterMidnight)) {
                     // Save the value
                     timePreference.setTime(minutesAfterMidnight);
 
-                    preference.setSummary(getSummary());
                 }
             }
         }
