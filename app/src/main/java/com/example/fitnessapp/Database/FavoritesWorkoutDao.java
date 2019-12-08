@@ -17,6 +17,9 @@ public interface FavoritesWorkoutDao {
     @Query("SELECT * FROM FavoritesWorkouts")
     LiveData<List<FavoritesWorkouts>> getAll();
 
+    @Query("SELECT * FROM FavoritesWorkouts")
+    List<FavoritesWorkouts> getAllSimpleList();
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertWorkout(FavoritesWorkouts favoritesWorkouts);
 

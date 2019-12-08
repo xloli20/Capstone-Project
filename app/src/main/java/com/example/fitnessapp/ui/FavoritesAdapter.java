@@ -25,6 +25,10 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.Favo
     FavoritesAdapter(Context context) {
         this.context = context;
     }
+    public FavoritesAdapter(Context context, List<FavoritesWorkouts> favoritesWorkouts) {
+        this.context = context;
+        mFavorites = favoritesWorkouts;
+    }
 
     @NonNull
     @Override
