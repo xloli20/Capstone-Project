@@ -3,6 +3,7 @@ package com.example.fitnessapp.widget;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
@@ -51,12 +52,16 @@ public class MyWidgetRemoteViewsFactory implements RemoteViewsService.RemoteView
 
     @Override
     public RemoteViews getViewAt(int i) {
+        Log.d(TAG, "getViewAt: "+i);
         favoritesWorkout = favoritesWorkoutsList.get(i);
 
         RemoteViews rv = new RemoteViews(mContext.getPackageName(), R.layout.favorites_items);
         rv.setTextViewText(R.id.workout_title, favoritesWorkout.getWorkoutName());
-        rv.setTextViewText(R.id.workout_instruction, favoritesWorkout.getWorkoutInstruction());
-        rv.setImageViewUri(R.id.workout_image,Uri.parse(favoritesWorkout.getWorkoutImage()));
+        Log.d(TAG, "getViewAt: "+favoritesWorkout.getWorkoutName());
+        rv.setTextViewText(R.id.workout_instruction, "...");
+        Log.d(TAG, "getViewAt: "+favoritesWorkout.getWorkoutInstruction());
+        rv.setImageViewUri(R.id.workout_image,Uri.parse(""));
+        Log.d(TAG, "getViewAt: "+favoritesWorkout.getWorkoutImage());
 
         return rv;
     }

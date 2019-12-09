@@ -1,4 +1,13 @@
-#Fri Dec 06 03:49:03 AST 2019
-base.0=D\:\\ADND\\Capstone-Project\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Mon Dec 09 08:45:59 AST 2019
+path.3=classes_0.dex
+path.2=classes2.dex
+path.1=classes.dex
 path.0=classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.3=D\:\\ADND\\Capstone-Project\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_0.dex
+base.2=D\:\\ADND\\Capstone-Project\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes2.dex
+base.1=D\:\\ADND\\Capstone-Project\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.0=D\:\\ADND\\Capstone-Project\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex

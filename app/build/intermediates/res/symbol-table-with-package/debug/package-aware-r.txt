@@ -41,6 +41,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array widget_list
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -76,6 +77,9 @@ attr actionOverflowMenuStyle
 attr actionProviderClass
 attr actionViewClass
 attr activityChooserViewStyle
+attr adSize
+attr adSizes
+attr adUnitId
 attr ad_marker_color
 attr ad_marker_width
 attr adjustable
@@ -746,6 +750,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color cardview_dark_background
@@ -1596,6 +1604,8 @@ dimen abc_text_size_title_material_toolbar
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
 dimen app_bar_height
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -1751,6 +1761,7 @@ dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
 dimen vid_width
+dimen widget_margin
 drawable abc_ab_share_pack_mtrl_alpha
 drawable abc_action_bar_item_background_material
 drawable abc_btn_borderless_material
@@ -1872,6 +1883,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable example_appwidget_preview
 drawable exo_controls_fastforward
 drawable exo_controls_fullscreen_enter
 drawable exo_controls_fullscreen_exit
@@ -1989,6 +2001,7 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id adView
 id add
 id adjust_height
 id adjust_width
@@ -2002,6 +2015,11 @@ id barrier
 id beginning
 id blocking
 id bottom
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
 id buttonPanel
 id cancel_action
 id center
@@ -2106,6 +2124,7 @@ id line1
 id line3
 id listMode
 id list_item
+id list_view
 id masked
 id media_actions
 id message
@@ -2142,6 +2161,7 @@ id playerView
 id progress_circular
 id progress_horizontal
 id radio
+id recipes_name
 id recycler_view
 id recycler_view_workouts
 id right
@@ -2239,6 +2259,7 @@ id view_offset_helper
 id visible
 id when_playing
 id wide
+id widget
 id withText
 id workout_image
 id workout_instruction
@@ -2304,6 +2325,8 @@ layout abc_tooltip
 layout activity_detail
 layout activity_favorites
 layout activity_main
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2328,6 +2351,7 @@ layout exo_simple_player_view
 layout exo_track_selection_dialog
 layout expand_button
 layout favorites_items
+layout fitness_app_widget
 layout fragment_setting
 layout fragment_workout
 layout image_frame
@@ -2373,6 +2397,7 @@ layout support_simple_spinner_dropdown_item
 layout workout_items
 menu bottom_nav_menu
 menu menu
+menu menu_widget
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
@@ -2403,8 +2428,11 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add_widget
+string add_widget_message
 string app_name
 string appbar_scrolling_view_behavior
+string appwidget_text
 string bottom_sheet_behavior
 string cancel
 string character_counter_content_description
@@ -2493,6 +2521,13 @@ string preferences_switch_title
 string preferences_time_summ
 string preferences_time_title
 string project_id
+string s1
+string s2
+string s3
+string s4
+string s5
+string s6
+string s7
 string search_menu_title
 string set
 string status_bar_notification_info_overflow
@@ -2890,6 +2925,7 @@ style Theme_Design_Light
 style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
+style Theme_IAPTheme
 style Theme_MaterialComponents
 style Theme_MaterialComponents_BottomSheetDialog
 style Theme_MaterialComponents_Bridge
@@ -3061,6 +3097,7 @@ styleable ActionMenuView
 styleable ActionMode background backgroundSplit closeItemLayout height subtitleTextStyle titleTextStyle
 styleable ActivityChooserView expandActivityOverflowButtonDrawable initialActivityCount
 styleable ActivityNavigator android_name action data dataPattern
+styleable AdsAttrs adSize adSizes adUnitId
 styleable AlertDialog android_layout buttonIconDimen buttonPanelSideLayout listItemLayout listLayout multiChoiceItemLayout showTitle singleChoiceItemLayout
 styleable AnimatedStateListDrawableCompat android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable AnimatedStateListDrawableItem android_id android_drawable
@@ -3161,4 +3198,5 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml fitness_app_widget_info
 xml settings
