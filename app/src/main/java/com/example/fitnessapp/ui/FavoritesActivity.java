@@ -1,18 +1,14 @@
 package com.example.fitnessapp.ui;
 
-import android.appwidget.AppWidgetManager;
-import android.content.ComponentName;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.fitnessapp.AppExecutors;
 import com.example.fitnessapp.Database.AppDatabase;
 import com.example.fitnessapp.Database.FavoritesWorkouts;
-import com.example.fitnessapp.FitnessAppWidget;
 import com.example.fitnessapp.MainViewModel;
 import com.example.fitnessapp.R;
 
@@ -96,27 +92,27 @@ public class FavoritesActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.widget){
-            addWidget();
+//            addWidget();
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void addWidget() {
-        MainViewModel viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
-        // Observe the LiveData object in the ViewModel
-        viewModel.getFavorites().observe(this, favoritesWorkouts -> {
-            Log.d(TAG, "Updating list of movies from LiveData in ViewModel");
-            favoritesAdapter.setmFavorites(favoritesWorkouts);
-            AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this);
-            int[] appWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(this, FitnessAppWidget.class));
-            if (appWidgetIds.length == 0) {
-                Toast.makeText(this, "Please make a home screen widget first!", Toast.LENGTH_SHORT).show();
-            } else {
-                for (int appWidgetId : appWidgetIds) {
-                    FitnessAppWidget.updateAppWidget(this, appWidgetManager, appWidgetId, favoritesWorkouts);
-                }
-            }
-        });
-
-    }
+//    private void addWidget() {
+//        MainViewModel viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+//        // Observe the LiveData object in the ViewModel
+//        viewModel.getFavorites().observe(this, favoritesWorkouts -> {
+//            Log.d(TAG, "Updating list of movies from LiveData in ViewModel");
+//            favoritesAdapter.setmFavorites(favoritesWorkouts);
+//            AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this);
+//            int[] appWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(this, FitnessAppWidget.class));
+//            if (appWidgetIds.length == 0) {
+//                Toast.makeText(this, "Please make a home screen widget first!", Toast.LENGTH_SHORT).show();
+//            } else {
+//                for (int appWidgetId : appWidgetIds) {
+//                    FitnessAppWidget.updateAppWidget(this, appWidgetManager, appWidgetId, favoritesWorkouts);
+//                }
+//            }
+//        });
+//
+//    }
 }

@@ -8,77 +8,45 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.fitnessapp.Database.FavoritesWorkouts;
 import com.example.fitnessapp.R;
 
-import java.util.ArrayList;
+import java.util.List;
 
-public class ListViewAdapter extends ArrayAdapter<FavoritesWorkouts> implements View.OnClickListener{
+import androidx.annotation.NonNull;
 
-private ArrayList<FavoritesWorkouts> dataSet;
-        Context mContext;
+public class ListViewAdapter extends ArrayAdapter<FavoritesWorkouts> {
 
-// View lookup cache
-private static class ViewHolder {
-    ImageView imageView;
-    TextView textViewTitle;
-    TextView textViewInstruction;
-}
+    Context context;
+    int resourse;
 
-    public ListViewAdapter(ArrayList<FavoritesWorkouts> data, Context context) {
-        super(context, R.layout.favorites_items, data);
-        this.dataSet = data;
-        this.mContext=context;
-
+    public ListViewAdapter(@NonNull Context context, int resource, @NonNull List<FavoritesWorkouts> objects) {
+        super(context, resource, objects);
+        this.context = context;
+        this.resourse = resource;
     }
 
-    @Override
-    public void onClick(View v) {
-
-        int position=(Integer) v.getTag();
-        Object object= getItem(position);
-        FavoritesWorkouts dataModel=(FavoritesWorkouts)object;
-
-    }
-
-    private int lastPosition = -1;
-
-    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Get the data item for this position
-        FavoritesWorkouts dataModel = getItem(position);
-        // Check if an existing view is being reused, otherwise inflate the view
-        ViewHolder viewHolder; // view lookup cache stored in tag
 
-        final View result;
+        convertView = LayoutInflater.from(context).inflate(resourse, parent, false);
 
-        if (convertView == null) {
+        //ImageButton imageButton = (ImageButton) convertView.findViewById(R.id.image);
+        ImageView tx2 = convertView.findViewById(R.id.workout_image);
+        TextView tx3 =  convertView.findViewById(R.id.workout_title);
+        TextView tx4 =  convertView.findViewById(R.id.workout_instruction);
 
-            viewHolder = new ViewHolder();
-            LayoutInflater inflater = LayoutInflater.from(getContext());
-            convertView = inflater.inflate(R.layout.favorites_items , parent, false);
-            viewHolder.imageView = convertView.findViewById(R.id.workout_image);
-            viewHolder.textViewTitle = convertView.findViewById(R.id.workout_title);
-            viewHolder.textViewInstruction = convertView.findViewById(R.id.workout_instruction);
+        FavoritesWorkouts An = getItem(position);
 
-            result=convertView;
+        //Bitmap bitmap = BitmapFactory.decodeByteArray(An.getImage(), 0 , An.getImage().length);
+        //imageButton.setImageBitmap(bitmap);
+        Glide.with(convertView)
+                .load(An.getWorkoutImage())
+                .placeholder(R.drawable.ic_workout)
+                .into(tx2);
+        tx3.setText(An.getWorkoutName());
+        tx4.setText(An.getWorkoutInstruction());
 
-            convertView.setTag(viewHolder);
-        } else {
-            viewHolder = (ViewHolder) convertView.getTag();
-            result=convertView;
-        }
-
-//        Animation animation = AnimationUtils.loadAnimation(mContext, (position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_top);
-//        result.startAnimation(animation);
-//        lastPosition = position;
-
-//        viewHolder.txtName.setText(dataModel.getName());
-//        viewHolder.txtType.setText(dataModel.getType());
-//        viewHolder.txtVersion.setText(dataModel.getVersion_number());
-//        viewHolder.info.setOnClickListener(this);
-//        viewHolder.info.setTag(position);
-        // Return the completed view to render on screen
         return convertView;
     }
 }
