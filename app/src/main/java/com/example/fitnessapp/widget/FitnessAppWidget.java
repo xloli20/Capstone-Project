@@ -4,6 +4,7 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.RemoteViews;
 
 import com.example.fitnessapp.Database.FavoritesWorkouts;
@@ -27,6 +28,7 @@ public class FitnessAppWidget extends AppWidgetProvider {
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.fitness_app_widget);
         Intent intent = new Intent(context, MyWidgetRemoteViewsService.class);
         views.setRemoteAdapter(R.id.list_view, intent);
+        Log.d(TAG, "updateAppWidget: setRemoteAdapter");
 
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);

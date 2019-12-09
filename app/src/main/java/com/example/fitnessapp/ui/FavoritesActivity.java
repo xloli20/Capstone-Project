@@ -44,17 +44,14 @@ public class FavoritesActivity extends AppCompatActivity {
         favoritesAdapter = new FavoritesAdapter(this);
         fRecyclerView.setAdapter(favoritesAdapter);
 
-
         //DB initialization
         mDB = AppDatabase.getInstance(getApplicationContext());
 
-        //
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                 return false;
             }
-
             // Called when a user swipes left or right on a ViewHolder
             @Override
             public void onSwiped(@NonNull final RecyclerView.ViewHolder viewHolder, int swipeDir) {

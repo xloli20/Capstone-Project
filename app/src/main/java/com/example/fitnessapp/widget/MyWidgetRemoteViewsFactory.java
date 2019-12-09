@@ -3,10 +3,10 @@ package com.example.fitnessapp.widget;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Binder;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
+import com.example.fitnessapp.AppExecutors;
 import com.example.fitnessapp.Database.AppDatabase;
 import com.example.fitnessapp.Database.FavoritesWorkouts;
 import com.example.fitnessapp.R;
@@ -34,24 +34,14 @@ public class MyWidgetRemoteViewsFactory implements RemoteViewsService.RemoteView
 
     @Override
     public void onDataSetChanged() {
-
-        final long identityToken = Binder.clearCallingIdentity();
-
-        //todo: try it with executor
-        favoritesWorkoutsList = mDB.favoritesWorkoutDao().getAllSimpleList();
-//        MainViewModel viewModel = ViewModelProviders.of(FavoritesActivity.class).get(MainViewModel.class);
-//        // Observe the LiveData object in the ViewModel
-//        viewModel.getFavorites().observe(this, favoritesWorkouts -> {
-//            Log.d(TAG, "Updating list of movies from LiveData in ViewModel");
-//
-//        });
-        Binder.restoreCallingIdentity(identityToken);
-
+//        final long identityToken = Binder.clearCallingIdentity();
+        AppExecutors.getInstance().diskIO().execute(() ->
+                favoritesWorkoutsList = mDB.favoritesWorkoutDao().getAllSimpleList());
+//        Binder.restoreCallingIdentity(identityToken);
     }
 
     @Override
     public void onDestroy() {
-
     }
 
     @Override
@@ -61,7 +51,6 @@ public class MyWidgetRemoteViewsFactory implements RemoteViewsService.RemoteView
 
     @Override
     public RemoteViews getViewAt(int i) {
-
         favoritesWorkout = favoritesWorkoutsList.get(i);
 
         RemoteViews rv = new RemoteViews(mContext.getPackageName(), R.layout.favorites_items);
