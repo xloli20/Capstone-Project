@@ -1,11 +1,11 @@
-package com.example.fitnessapp;
+package com.example.fitnessapp.ui.other;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.fitnessapp.ui.FavoritesActivity;
+import com.example.fitnessapp.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(navView, navController);
 
+        //Admob Initialization
         MobileAds.initialize(this, initializationStatus -> {
         });
         mAdView = findViewById(R.id.adView);

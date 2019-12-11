@@ -6,10 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.fitnessapp.JsonUtil;
 import com.example.fitnessapp.R;
-import com.example.fitnessapp.WorkoutModel;
-import com.example.fitnessapp.ui.DetailActivity;
+import com.example.fitnessapp.models.WorkoutModel;
+import com.example.fitnessapp.ui.other.DetailActivity;
+import com.example.fitnessapp.utilites.JsonUtil;
 import com.example.workoutslib.WorkoutsData;
 
 import org.json.JSONException;

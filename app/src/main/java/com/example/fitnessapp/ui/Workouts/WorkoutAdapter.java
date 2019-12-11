@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.fitnessapp.R;
-import com.example.fitnessapp.WorkoutModel;
+import com.example.fitnessapp.models.WorkoutModel;
 
 import java.util.ArrayList;
 

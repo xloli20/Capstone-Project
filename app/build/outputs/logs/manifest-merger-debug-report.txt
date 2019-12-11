@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-57:12
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-60:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Alaa\.gradle\caches\transforms-2\files-2.1\e72a5de81a7e3779f2edbc852e21229c\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\Alaa\.gradle\caches\transforms-2\files-2.1\63e00dccab6d65ef47fd66db1d41a33f\jetified-navigation-ui-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Alaa\.gradle\caches\transforms-2\files-2.1\4f3544d200097d1926e6df3e9bf8bd41\material-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -79,20 +79,20 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\Alaa\.gradle\c
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Alaa\.gradle\caches\transforms-2\files-2.1\5171ed861002b60957c172a280a6017b\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Alaa\.gradle\caches\transforms-2\files-2.1\bb233228b8823d3c791404a2a8df1ed2\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-ads-base:18.3.0] C:\Users\Alaa\.gradle\caches\transforms-2\files-2.1\1890738d084faa56672668efabdd2c0f\play-services-ads-base-18.3.0\AndroidManifest.xml:2:1-9:12
-INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-57:12
-INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-60:12
 	package
 		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml
 		INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-60:12
 		INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-57:12
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:1-60:12
 		INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:2:11-69
@@ -107,7 +107,7 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.1.0] C:
 	android:name
 		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:7:5-55:19
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:7:5-58:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Alaa\.gradle\caches\transforms-2\files-2.1\4f3544d200097d1926e6df3e9bf8bd41\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Alaa\.gradle\caches\transforms-2\files-2.1\4f3544d200097d1926e6df3e9bf8bd41\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Alaa\.gradle\caches\transforms-2\files-2.1\186ea041bf90cfd1698e007f3ea9bff3\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
@@ -188,58 +188,64 @@ ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:20:13-22:67
 		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:22:17-64
 	android:name
 		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:21:17-58
-activity#com.example.fitnessapp.ui.DetailActivity
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:25:9-55
+activity#com.example.fitnessapp.ui.other.DetailActivity
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:25:9-26:66
+	android:parentActivityName
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:26:13-64
 	android:name
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:25:19-52
-activity#com.example.fitnessapp.ui.FavoritesActivity
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:26:9-58
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:25:19-58
+activity#com.example.fitnessapp.ui.other.FavoritesActivity
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:27:9-28:66
+	android:parentActivityName
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:28:13-64
 	android:name
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:26:19-55
-activity#com.example.fitnessapp.MainActivity
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:27:9-36:20
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:27:19-61
+activity#com.example.fitnessapp.ui.other.MainActivity
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:29:9-39:20
+	android:screenOrientation
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:32:13-49
 	android:label
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:29:13-45
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:31:13-45
 	android:name
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:28:13-41
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:30:13-50
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:30:13-35:29
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:33:13-38:29
 action#android.intent.action.MAIN
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:31:17-69
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:34:17-69
 	android:name
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:31:25-66
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:34:25-66
 action#android.intent.action.VIEW
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:32:17-69
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:32:25-66
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:34:17-77
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:34:27-74
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:37:27-74
 service#com.example.fitnessapp.MyFirebaseMessagingService
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:38:9-44:19
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:41:9-47:19
 	android:exported
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:40:13-37
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:43:13-37
 	android:name
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:39:13-55
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:42:13-55
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:41:13-43:29
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:44:13-46:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:42:17-78
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:45:17-78
 	android:name
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:42:25-75
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:45:25-75
 service#com.example.fitnessapp.widget.MyWidgetRemoteViewsService
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:46:9-48:19
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:49:9-51:19
 	android:permission
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:47:13-69
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:50:13-69
 	android:name
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:46:18-67
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:49:18-67
 meta-data#com.google.android.gms.ads.APPLICATION_ID
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:51:9-53:69
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:54:9-56:69
 	android:value
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:53:13-67
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:56:13-67
 	android:name
-		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:52:13-69
+		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:55:13-69
 uses-sdk
 INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.preference.PreferenceCategory
         android:title="@string/preferences_category_one">
@@ -13,6 +14,7 @@
             style="@style/AppPreference.DialogPreference"
             android:defaultValue="90"
             android:key="pref_pref4"
+            app:isPreferenceVisible="false"
             android:summary="@string/preferences_time_summ"
             android:title="@string/preferences_time_title"/>
 

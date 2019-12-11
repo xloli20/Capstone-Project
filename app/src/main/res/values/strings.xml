@@ -24,6 +24,7 @@
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="add_widget_message">Add widget to home screen</string>
+    <string name="reminder_message">Hey, It\'s WORKOUT TIME !!</string>
 
     <string-array name="widget_list">
         <item>add your favorites workouts here</item>

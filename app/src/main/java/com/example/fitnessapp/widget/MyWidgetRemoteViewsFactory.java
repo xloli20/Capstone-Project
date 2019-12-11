@@ -7,10 +7,10 @@ import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
-import com.example.fitnessapp.AppExecutors;
 import com.example.fitnessapp.Database.AppDatabase;
 import com.example.fitnessapp.Database.FavoritesWorkouts;
 import com.example.fitnessapp.R;
+import com.example.fitnessapp.utilites.AppExecutors;
 
 import java.util.ArrayList;
 import java.util.List;

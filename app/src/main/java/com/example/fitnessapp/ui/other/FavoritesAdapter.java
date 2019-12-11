@@ -1,4 +1,4 @@
-package com.example.fitnessapp.ui;
+package com.example.fitnessapp.ui.other;
 
 import android.content.Context;
 import android.view.LayoutInflater;

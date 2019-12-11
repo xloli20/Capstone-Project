@@ -1,6 +1,6 @@
-package com.example.fitnessapp;
+package com.example.fitnessapp.utilites;
 
-import android.util.Log;
+import com.example.fitnessapp.models.WorkoutModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -8,18 +8,12 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-
 public class JsonUtil {
-    private static final String TAG = JsonUtil.class.getSimpleName();
 
     public static ArrayList<WorkoutModel> parseWorkoutJson(String json) throws JSONException {
 
         JSONObject workouts = new JSONObject(convertStandardJSONString(json));
-
-        Log.d(TAG, "parseWorkoutJson: " + workouts);
         JSONArray results = workouts.getJSONArray("workouts");
-        Log.d(TAG, "parseWorkoutJson: " + results);
-
         ArrayList<WorkoutModel> workoutsArrayList = new ArrayList<>();
 
         if (results.length() != 0) {

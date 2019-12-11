@@ -27,6 +27,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
 
+import com.example.fitnessapp.ui.other.MainActivity;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 

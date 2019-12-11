@@ -84,8 +84,6 @@ public class TimeDialog extends PreferenceDialogFragmentCompat {
             if (Build.VERSION.SDK_INT >= 23) {
                 hours = mTimePicker.getHour();
                 minutes = mTimePicker.getMinute();
-
-
             } else {
                 hours = mTimePicker.getCurrentHour();
                 minutes = mTimePicker.getCurrentMinute();
@@ -112,7 +110,6 @@ public class TimeDialog extends PreferenceDialogFragmentCompat {
                 if (timePreference.callChangeListener(minutesAfterMidnight)) {
                     // Save the value
                     timePreference.setTime(minutesAfterMidnight);
-
                 }
             }
         }

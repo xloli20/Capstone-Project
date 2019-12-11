@@ -1,4 +1,4 @@
-package com.example.fitnessapp.ui;
+package com.example.fitnessapp.ui.other;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -6,11 +6,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.example.fitnessapp.AppExecutors;
 import com.example.fitnessapp.Database.AppDatabase;
 import com.example.fitnessapp.Database.FavoritesWorkouts;
-import com.example.fitnessapp.MainViewModel;
 import com.example.fitnessapp.R;
+import com.example.fitnessapp.utilites.AppExecutors;
+import com.example.fitnessapp.utilites.MainViewModel;
 
 import java.util.List;
 

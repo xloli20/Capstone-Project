@@ -1,4 +1,4 @@
-package com.example.fitnessapp;
+package com.example.fitnessapp.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -10,7 +10,7 @@ public class WorkoutModel implements Parcelable {
     private String workoutImages;
     private String workoutInstructions;
 
-    WorkoutModel(String workoutName, String workoutVideo, String workoutImages, String workoutInstructions) {
+    public WorkoutModel(String workoutName, String workoutVideo, String workoutImages, String workoutInstructions) {
         this.workoutName = workoutName;
         this.workoutVideo = workoutVideo;
         this.workoutImages = workoutImages;
