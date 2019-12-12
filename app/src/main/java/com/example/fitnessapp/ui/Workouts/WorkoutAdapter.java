@@ -70,7 +70,7 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
             Glide.with(itemView)
                     .load(workouts.get(position).getWorkoutImages())
                     .placeholder(R.drawable.ic_launcher_background)
-                    .fitCenter()
+                    .override(200, 75)
                     .into(imageView);
             textView.setText(workouts.get(position).getWorkoutName());
         }

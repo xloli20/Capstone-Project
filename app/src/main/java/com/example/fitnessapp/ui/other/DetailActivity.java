@@ -26,7 +26,9 @@ import com.google.android.exoplayer2.util.Util;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class DetailActivity extends AppCompatActivity {
     private final static String TAG = DetailActivity.class.getSimpleName();
@@ -38,6 +40,8 @@ public class DetailActivity extends AppCompatActivity {
     private TextView mInstructionTextView;
     private CollapsingToolbarLayout mAppBarLayout;
     private ImageView mFavorite;
+    private Toolbar toolbar;
+
 
     private AppDatabase mDB;
     private WorkoutModel mWorkout;
@@ -46,6 +50,15 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        toolbar = findViewById(R.id.detail_toolbar);
+        setSupportActionBar(toolbar);
+
+
+        // Show the Up button in the action bar.
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         mInstructionTextView = findViewById(R.id.instruction);
         mPlayerView = findViewById(R.id.playerView);

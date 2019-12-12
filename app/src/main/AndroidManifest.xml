@@ -24,7 +24,8 @@
 
         <activity
             android:name=".ui.other.DetailActivity"
-            android:parentActivityName=".ui.other.MainActivity" />
+            android:parentActivityName=".ui.other.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.other.FavoritesActivity"
             android:parentActivityName=".ui.other.MainActivity" />

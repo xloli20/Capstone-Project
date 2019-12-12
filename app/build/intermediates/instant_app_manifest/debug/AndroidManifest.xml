@@ -39,7 +39,8 @@
 
         <activity
             android:name="com.example.fitnessapp.ui.other.DetailActivity"
-            android:parentActivityName="com.example.fitnessapp.ui.other.MainActivity" />
+            android:parentActivityName="com.example.fitnessapp.ui.other.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.fitnessapp.ui.other.FavoritesActivity"
             android:parentActivityName="com.example.fitnessapp.ui.other.MainActivity" />
