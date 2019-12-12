@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_90sdp"
         android:scaleType="centerCrop"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/workout_image_des"
         android:src="@drawable/ic_workout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.431"

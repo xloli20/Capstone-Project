@@ -1850,6 +1850,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable back
+drawable back2
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2122,6 +2124,8 @@ id left
 id light
 id line1
 id line3
+id linearLayout
+id linearLayout1
 id listMode
 id list_item
 id list_view
@@ -2521,6 +2525,7 @@ string preferences_switch_title
 string preferences_time_summ
 string preferences_time_title
 string project_id
+string reminder_message
 string s1
 string s2
 string s3

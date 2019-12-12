@@ -1,6 +1,5 @@
 package com.example.fitnessapp.ui.other;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -33,7 +32,6 @@ import androidx.appcompat.widget.Toolbar;
 public class DetailActivity extends AppCompatActivity {
     private final static String TAG = DetailActivity.class.getSimpleName();
 
-    private Context mContext;
     private PlayerView mPlayerView;
     private SimpleExoPlayer mSimpleExoPlayer;
 
@@ -52,7 +50,6 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         toolbar = findViewById(R.id.detail_toolbar);
         setSupportActionBar(toolbar);
-
 
         // Show the Up button in the action bar.
         ActionBar actionBar = getSupportActionBar();

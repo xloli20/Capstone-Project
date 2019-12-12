@@ -29,5 +29,8 @@
     <string-array name="widget_list">
         <item>add your favorites workouts here</item>
     </string-array>
+    <string name="star_content_des">favotite workout to save locally</string>
+    <string name="workout_image_des">workout image</string>
+
 
 </resources>
