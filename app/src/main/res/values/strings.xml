@@ -2,33 +2,21 @@
     <string name="app_name">Fitness App</string>
     <string name="title_workout">WORKOUTS</string>
     <string name="title_setting">SETTINGS</string>
-    <string name="cancel">cancel</string>
-    <string name="set">set</string>
 
     <string name="preferences_category_one">Reminders</string>
-    <string name="preferences_category_two">Category 2</string>
 
     <string name="preferences_switch_title">Set Reminder</string>
-    <string name="preferences_switch_summ">Switch Summary</string>
 
 
     <string name="preferences_time_title">Set Time Reminder</string>
     <string name="preferences_time_summ">00:00</string>
 
-    <string name="preferences_checkbox_title">CheckBox Preference</string>
-    <string name="preferences_checkbox_summ">CheckBox Summary</string>
-
     <!--    fcm-->
     <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
     <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
-    <string name="appwidget_text">EXAMPLE</string>
-    <string name="add_widget">Add widget</string>
     <string name="add_widget_message">Add widget to home screen</string>
     <string name="reminder_message">Hey, It\'s WORKOUT TIME !!</string>
 
-    <string-array name="widget_list">
-        <item>add your favorites workouts here</item>
-    </string-array>
     <string name="star_content_des">favotite workout to save locally</string>
     <string name="workout_image_des">workout image</string>
 

@@ -189,7 +189,7 @@ ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:20:13-22:67
 	android:name
 		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:21:17-58
 activity#com.example.fitnessapp.ui.other.DetailActivity
-ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:25:9-28:58
+ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:25:9-28:59
 	android:parentActivityName
 		ADDED from D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:27:13-64
 	android:theme

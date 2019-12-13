@@ -66,7 +66,7 @@
 37        </receiver>
 38
 39        <activity
-39-->D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:25:9-28:58
+39-->D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:25:9-28:59
 40            android:name="com.example.fitnessapp.ui.other.DetailActivity"
 40-->D:\ADND\Capstone-Project\app\src\main\AndroidManifest.xml:26:13-52
 41            android:parentActivityName="com.example.fitnessapp.ui.other.MainActivity"
